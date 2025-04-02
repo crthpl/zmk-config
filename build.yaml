@@ -21,4 +21,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: calour
+    shield: calour_left
+  - board: seeeduino_xiao_ble
+    shield: calour_right
