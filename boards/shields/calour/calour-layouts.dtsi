@@ -9,8 +9,7 @@
         display-name = "Default Layout";
         transform = <&default_transform>;
         kscan = <&kscan>;
-
-    }        keys  //                     w   h    x    y     rot    rx    ry
+        keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0  158       0     0     0>
             , <&key_physical_attrs 100 100  100   47       0     0     0>
             , <&key_physical_attrs 100 100  200    0       0     0     0>
@@ -48,5 +47,5 @@
             , <&key_physical_attrs 100 100 1528  247       0     0     0>
             , <&key_physical_attrs 100 100 1627  358       0     0     0>
             ;
-;
+     };
 };
