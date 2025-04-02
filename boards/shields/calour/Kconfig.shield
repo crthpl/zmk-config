@@ -1,0 +1,5 @@
+config SHIELD_CALOUR_LEFT
+    def_bool $(shields_list_contains,calour_left)
+
+config SHIELD_CALOUR_RIGHT
+    def_bool $(shields_list_contains,calour_right)
