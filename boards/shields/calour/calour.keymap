@@ -17,5 +17,42 @@
                 &kp Z &kp X &kp C &kp V &kp B &studio_unlock &kp LCTRL &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH
             >;
         };
+
+		extra1 {
+            status = "reserved";
+        };
+        extra2 {
+            status = "reserved";
+		};
+		extra3 {
+			status = "reserved";
+		};
+		extra4 {
+			status = "reserved";
+        };
+		extra8 {
+            status = "reserved";
+        };
+        extra9 {
+            status = "reserved";
+		};
+		extra10 {
+			status = "reserved";
+		};
+		extra11 {
+			status = "reserved";
+        };
+		extra12 {
+            status = "reserved";
+        };
+        extra13 {
+            status = "reserved";
+		};
+		extra14 {
+			status = "reserved";
+		};
+		extra15 {
+			status = "reserved";
+        };
     };
 };
