@@ -4,6 +4,35 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/*
+
+TO TYPE:
+Symbols: ~`@#$%^&*-_=+/\|;:'",.?! (Number of symbols: 24)
+    Shifting Behaviour:
+      ` -> ~
+
+Paran: []<>{}() (Number of symbols: 8)
+    Shifting Behaviour:
+      () -> <>
+      [] -> {}
+
+Alphas: 26
+Numbers: 10 (Shift turns into numpad)
+
+Combo Possibilities:
+Vertical: 2 per column incl. thumbs, so 2/col * 6col/side * 2 sides = 24
+Horizontal: Index finger has 3/side, Pinky/Ring has 2/side, so (2/3)*2 = 10
+Multi: Middle/Ring has 3/side, so 2*3 = 6
+Homerow: 8 keys total, so 8C2 = 28
+Homerow full chording: 219 combinations
+
+24+10+6+28 = 68
+
+*/
+#define DEF 0
+#define NAV 1
+#define NUM 2
+
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
@@ -12,55 +41,21 @@
 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp F &kp P &kp B &kp LGUI &kp LSHIFT       &kp J &kp L &kp U &kp Y &kp SEMICOLON
-                &kp A &kp R &kp S &kp T &kp G &kp SPACE &kp ENTER       &kp N &kp M &kp E &kp I &kp O
-                &kp Z &kp X &kp C &kp D &kp V &studio_unlock &kp LCTRL &kp K &kp H &kp COMMA &kp PERIOD &kp SLASH
+                &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L &kp U &kp Y &kp SEMICOLON
+                &kp A &kp R &kp S &kp T &kp G   &kp N &kp M &kp E &kp I &kp O
+                &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H &kp COMMA &kp PERIOD &kp SLASH
+            &studio_unlock &kp SPACE &kp LGUI   &kp LSHIFT &kp ENTER &kp LCTRL
             >;
         };
 
-		extra1 {
-            status = "reserved";
-        };
-        extra2 {
-            status = "reserved";
-		};
-		extra3 {
-			status = "reserved";
-		};
-		extra4 {
-			status = "reserved";
-        };
-		extra8 {
-            status = "reserved";
-        };
-        extra9 {
-            status = "reserved";
-		};
-		extra10 {
-			status = "reserved";
-		};
-		extra11 {
-			status = "reserved";
-        };
-		extra12 {
-            status = "reserved";
-        };
-        extra13 {
-            status = "reserved";
-		};
-		extra14 {
-			status = "reserved";
-		};
-		extra15 {
-			status = "reserved";
-        };
-
-		extra1 {
-            status = "reserved";
-        };
-        extra2 {
-            status = "reserved";
-		};
+//        settings {
+//            bindings = <
+//    &studio_unlock &trans &trans &trans &trans    &bt BT_CLR  &trans &trans &trans &studio_unlock
+//        &sys_reset &trans &trans &trans &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &sys_reset
+//       &bootloader &trans &trans &trans &trans    &trans &trans &trans &trans &bootloader
+//                          &trans &trans &trans    &trans &trans &trans
+//            >;
+//		};
 		extra3 {
 			status = "reserved";
 		};
